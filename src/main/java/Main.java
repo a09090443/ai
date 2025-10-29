@@ -2,7 +2,7 @@ import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.service.AiServices;
 
-import static dev.langchain4j.model.chat.Capability.RESPONSE_FORMAT_JSON_SCHEMA;
+import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_5_MINI;
 
 /**
  * @author gary.tsai
@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] args) {
 
         ChatModel chatModel = OpenAiChatModel.builder()
-                .apiKey("xxx")
-                .modelName("instruct")
+                .apiKey("sk-proj-xxx")
+                .modelName(GPT_5_MINI)
                 .responseFormat("json_schema")
                 .strictJsonSchema(false)
                 .logRequests(true)
